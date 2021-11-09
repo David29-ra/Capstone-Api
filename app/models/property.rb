@@ -16,4 +16,7 @@ class Property < ApplicationRecord
 
   # associations
   belongs_to :user, -> { where role: 1 }, inverse_of: :properties
+
+  # attached
+  # has_many_attached :images
 end
