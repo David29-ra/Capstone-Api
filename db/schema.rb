@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(version: 2021_11_09_185325) do
   create_table "properties", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "operation_type", null: false
-    t.integer "status", null: false
+    t.integer "status", null: false, default: 0
     t.string "address", null: false
     t.integer "price", null: false
-    t.integer "maintenance"
+    t.integer "maintenance", default: 0
     t.integer "property_type", null: false
     t.integer "beds", default: 1, null: false
     t.integer "baths", default: 1, null: false
