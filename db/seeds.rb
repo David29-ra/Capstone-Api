@@ -14,7 +14,7 @@ users = User.create([{ email: "test0@mail.com", password: "123456" , name: "Dulc
             ]) 
 puts 'End generate users! 😌'
 
-puts 'Start generate properties'
+puts 'Start generate properties 😎'
 landlords = users.filter{|user| user.role == "landlord"}
 
 landlords.each do |landlord|
