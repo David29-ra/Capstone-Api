@@ -16,7 +16,10 @@ class Property < ApplicationRecord
 
   # associations
   belongs_to :user, -> { where role: 1 }, inverse_of: :properties
-
+  has_many :favorites
+  has_many :contacts
+  has_many :did_favorite_users, through: :favorites, source: :user, dependent: :destroy
+  has_many :did_contact_users, through: :contacts, source: :user, dependent: :destroy
   # attached
   # has_many_attached :images
 end

@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   # associations
   has_many :properties, dependent: :destroy
-  # has_many :favorited, through: :favorites, source: :Property, dependent: :destroy
-  # has_many :contacted, through: :contacts, source: :Property, dependent: :destroy
+  has_many :favorites
+  has_many :contacts
+  has_many :favorited, through: :favorites, source: :property, dependent: :destroy
+  has_many :contacted, through: :contacts, source: :property, dependent: :destroy
 end
