@@ -20,6 +20,7 @@ class Property < ApplicationRecord
   has_many :contacts, dependent: :nullify
   has_many :did_favorite_users, through: :favorites, source: :user, dependent: :destroy
   has_many :did_contact_users, through: :contacts, source: :user, dependent: :destroy
+
   # attached
-  # has_many_attached :images
+  has_many_attached :photos
 end
