@@ -19,4 +19,8 @@ class User < ApplicationRecord
   has_many :contacts, dependent: :nullify
   has_many :favorited, through: :favorites, source: :property, dependent: :destroy
   has_many :contacted, through: :contacts, source: :property, dependent: :destroy
+
+  # token
+  has_secure_token
+  has_secure_token :auth_token
 end
