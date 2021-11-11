@@ -1,6 +1,5 @@
 module Api
   class UsersController < ApplicationController
-
     def new
       render json: {}
     end
