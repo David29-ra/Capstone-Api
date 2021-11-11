@@ -6,7 +6,7 @@ User.destroy_all
 puts "Start seeding! 🐑"
 puts 'Start generate users ✨'
 
-users = User.create([{ email: "test0@mail.com", password: "123456" , name: "Dulces",  phone: "900900901", role: 0},
+users = User.create([{ email: "test0@mail.com", password: "123456" , name: "Dulces",  phone: "900900901", role: 0 },
             { email: "test1@mail.com", password: "123456" , name: "Morrito", phone: "900900902", role: 1 },
             { email: "test2@mail.com", password: "123456" , name: "El Traidor", phone: "900900903", role: 1 },
             { email: "test3@mail.com", password: "123456" , name: "Jose", phone: "900900904", role: 0 },
