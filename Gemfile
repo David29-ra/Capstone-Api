@@ -47,3 +47,7 @@ gem 'rubocop-rails'
 gem 'faker'
 
 gem 'table_print'
+
+# gem 'cloudinary'
+
+gem 'active_model_serializers'
