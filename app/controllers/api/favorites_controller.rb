@@ -1,14 +1,13 @@
 module Api
   class FavoritesController < ApplicationController
-
     def create
       @favorite = Favorite.new(favorite_params)
       @favorite.save ? (render json: @favorite) : (render json: @favorite.errors.messages)
     end
 
     def destroy
-      @Favorite = Favorite.find(params[:id])
-      @Favorite.destroy
+      @favorite = Favorite.find(params[:id])
+      @favorite.destroy
     end
 
     private
