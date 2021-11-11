@@ -25,7 +25,7 @@ module Api
     def response_format(user)
       { token: user.token,
         user_info: { email: user.email, name: user.name, phone: user.phone,
-                     role: user.role },
+                     role: user.role, id: user.id },
         properties_info: { favorites: user.favorites, contacts: user.contacts,
                            properties: user.properties } }
     end
