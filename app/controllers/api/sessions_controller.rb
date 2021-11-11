@@ -14,7 +14,7 @@ module Api
       end
     end
 
-    # POST /api/logout
+    # DELETE /api/logout
     def destroy
       current_user.invalidate_token
       head :no_content
