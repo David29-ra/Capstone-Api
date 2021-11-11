@@ -1,13 +1,17 @@
 module Api
   class UsersController < ApplicationController
-    def new
-      render json: {}
+    skip_before_action :authorize_token, only: :create
+
+    def create
+      @user = User.new(user_params)
+      @user.password = params[:password]
+      @user.save ? (render json: @user) : (render json: @user.errors.messages)
     end
 
-    # private
+    private
 
-    # def user_params
-    #   params.require(:user).permit(:email, :password)
-    # end
+    def user_params
+      params.require(:user).permit(:email, :password, :name, :phone, :role)
+    end
   end
 end
