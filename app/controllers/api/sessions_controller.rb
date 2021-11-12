@@ -18,6 +18,7 @@ module Api
     def destroy
       current_user.invalidate_token
       head :no_content
+      render json: { message: 'Logged out successfully' }
     end
 
     private
