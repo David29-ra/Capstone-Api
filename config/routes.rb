@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
     get '/properties', to: 'properties#index'
     post '/properties', to: 'properties#create'
+    patch '/properties/:id', to: 'properties#update'
+    delete '/properties/:id', to: 'properties#destroy'
 
     post '/favorites', to: 'favorites#create'
     delete '/favorites/:id', to: 'favorites#destroy'
