@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     post '/signup', to: 'users#create'
 
     get '/properties', to: 'properties#index'
+    post '/properties', to: 'properties#create'
 
     post '/favorites', to: 'favorites#create'
     delete '/favorites/:id', to: 'favorites#destroy'
