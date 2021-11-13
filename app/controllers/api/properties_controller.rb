@@ -17,6 +17,21 @@ module Api
       end
     end
 
+    # PATCH /api/properties/:id
+    def update
+      return unless current_user.landlord?
+
+      @property = Property.find(params[:id])
+
+      return unless @property.user_id == current_user.id
+
+      if @property.update(property_params)
+        (render json: @property)
+      else
+        (render json: @property.errors.messages)
+      end
+    end
+
     # DELETE /api/properties/:id
     def destroy
       if current_user.landlord?
