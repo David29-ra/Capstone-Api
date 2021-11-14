@@ -33,12 +33,10 @@ landlords.each do |landlord|
       operation_type: rand(0..1)
     }
     property = Property.create(property_params)
-    # puts 'Adding photos 📷'
-    # rand(1..3).times do
-    #   number = rand(1..27)
-    #   photo_number = number < 9 ? "0#{number+1}" : number + 1
-    #   property.photos.attach(io: File.open("app/photos/#{photo_number}.jpg"), filename: "#{photo_number}.jpg")
-    # end
+    puts 'Adding photos 📷'
+    number = rand(1..27)
+    photo_number = number < 9 ? "0#{number+1}" : number + 1
+    property.photo.attach(io: File.open("app/photos/#{photo_number}.jpg"), filename: "#{photo_number}.jpg")
   end
 end
 puts 'End generate properties!'
