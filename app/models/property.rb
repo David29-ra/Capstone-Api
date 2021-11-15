@@ -22,5 +22,5 @@ class Property < ApplicationRecord
   has_many :did_contact_users, through: :contacts, source: :user, dependent: :destroy
 
   # attached
-  has_many_attached :photos
+  has_one_attached :photo
 end
