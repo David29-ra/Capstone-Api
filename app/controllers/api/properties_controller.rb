@@ -3,6 +3,7 @@ module Api
     # GET /api/properties
     def index
       @properties = Property.all
+
       render json: @properties
     end
 
@@ -51,7 +52,7 @@ module Api
     def property_params
       params.require(:property).permit(:user_id, :address, :price, :area, :beds, :baths,
                                        :description, :status, :pets, :maintenance, :property_type,
-                                       :operation_type)
+                                       :operation_type, :photo)
     end
   end
 end
