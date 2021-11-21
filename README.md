@@ -66,8 +66,7 @@ $ sudo docker-compose exec client bash
 ```
 when you see something like this:
 
-
-![client](/Capstone-Api/screen/view1.png)
+<img src="./screen/view1.png">
 
 
 
@@ -98,7 +97,8 @@ You can open your localhost in your browser and you can see the project.
 
 http://localhost:3000
 
-![ror](/Capstone-Api/screen/ror.png)
+
+<img src="./screen/ror.png">
 
 
 ## To Stop
