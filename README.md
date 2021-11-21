@@ -5,6 +5,7 @@ This project is a RESTful API develop with Ruby on Rails for the Capstone projec
 
 1. The data bases are in PostgreSQL.
 2. Models are: User, Property, Favorite (relation if an user make favorite some property), and Contact(relation if an user call with a landlor).
+<br></br>
     * User:
         * id: integer
         * name: string
@@ -65,7 +66,10 @@ $ sudo docker-compose exec client bash
 ```
 when you see something like this:
 
+
 ![client](/Capstone-Api/screen/view1.png)
+
+
 
 you are in good way.
 
